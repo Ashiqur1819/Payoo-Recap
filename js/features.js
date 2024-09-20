@@ -9,3 +9,11 @@ document.getElementById('show-cash-out').addEventListener('click', function(){
 document.getElementById("show-transaction").addEventListener('click', function(){
     showPagesById("transaction-section");
 });
+
+document.getElementById("show-transfer-money").addEventListener('click', function(){
+    showPagesById("transfer-money-form");
+});
+
+document.getElementById("show-bonus").addEventListener("click", function () {
+  showPagesById("bonus-form");
+});

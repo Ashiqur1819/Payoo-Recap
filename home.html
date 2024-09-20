@@ -26,14 +26,19 @@
             </div>
             <div class="divider"></div>
             <!-- Add money and Cashout button -->
-            <div class="flex gap-3">
+            <div class="flex gap-3 flex-wrap justify-center">
               <button id="show-add-money" class="btn">Add Money</button>
               <button id="show-cash-out" class="btn">Cash Out</button>
               <button id="show-transaction" class="btn">Transactions</button>
+              <button id="show-transfer-money" class="btn">Transfer Money</button>
+              <button id="show-bonus" class="btn">Get Bonus</button>
             </div>
             <div class="divider"></div>
             <!-- Add Money Form starts here -->
-            <div id="add-money-form" class="card bg-base-100 w-11/12 max-w-sm shrink-0 shadow-2xl">
+            <div
+              id="add-money-form"
+              class=" card bg-base-100 w-11/12 max-w-sm shrink-0 shadow-2xl"
+            >
               <form class="card-body">
                 <div class="form-control">
                   <label class="label">
@@ -69,7 +74,10 @@
             <!-- Add Money Form ends here -->
 
             <!-- Cash out form starts here -->
-            <div id="cash-out-form" class="hidden card bg-base-100 w-11/12 max-w-sm shrink-0 shadow-2xl">
+            <div
+              id="cash-out-form"
+              class="hidden card bg-base-100 w-11/12 max-w-sm shrink-0 shadow-2xl"
+            >
               <form class="card-body">
                 <div class="form-control">
                   <label class="label">
@@ -106,12 +114,90 @@
 
             <!-- Transections section starts here -->
             <div id="transaction-section" class="hidden">
-                <h2 class="text-3xl text-center font-bold">Transaction Section</h2>
-                <div id="transaction-container">
-
-                </div>
+              <h2 class="text-3xl text-center font-bold">
+                Transaction Section
+              </h2>
+              <div id="transaction-container"></div>
             </div>
             <!-- Transections section ends here -->
+
+            <!-- Transfer Money starts here -->
+            <div
+              id="transfer-money-form"
+              class="hidden card bg-base-100 w-11/12 max-w-sm shrink-0 shadow-2xl"
+            >
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Amount</span>
+                  </label>
+                  <input
+                    id="transfer-money-input"
+                    type="text"
+                    placeholder="Enter Your Amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin Number</span>
+                  </label>
+                  <input
+                    id="transfer-money-pin"
+                    type="password"
+                    placeholder="Enter Your Pin"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="transfer-money-btn" class="btn btn-primary">
+                    Transfer Money
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- Transfer Money ends here -->
+
+            <!-- Bonus section starts here -->
+            <div
+              id="bonus-form"
+              class="hidden card bg-base-100 w-11/12 max-w-sm shrink-0 shadow-2xl"
+            >
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Coupon Code</span>
+                  </label>
+                  <input
+                    id="coupon-code-input"
+                    type="text"
+                    placeholder="Enter Your Coupon Code"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin Number</span>
+                  </label>
+                  <input
+                    id="bonus-pin"
+                    type="password"
+                    placeholder="Enter Your Pin"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="bonus-btn" class="btn btn-primary">
+                    Get Bonus
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- Bonus section ends here -->
           </div>
         </div>
       </div>
@@ -120,6 +206,8 @@
     <script src="./js/utilities.js"></script>
     <script src="./js/add-money.js"></script>
     <script src="./js/cash-out.js"></script>
+    <script src="./js/transfer.js"></script>
+    <script src="./js/bonus.js"></script>
     <script src="./js/features.js"></script>
   </body>
 </html>
